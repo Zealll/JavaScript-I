@@ -61,26 +61,49 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 //     arr[i]; // 1,2,3,4
 // }
 
+
+
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
-console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*` );
+
+
+for (i = 0; i < inventory.length; i++) {
+    console.log(`Car 33 is a ${inventory[32].car_year}, ${inventory[32].car_make}, ${inventory[32].car_model}`);
+}
+
+
 
 
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
 let lastCar = 0;
-console.log();
+ {
+    lastCar = inventory
+}
+
+
+console.log(`${lastCar[49].car_make}, ${lastCar[49].car_model}`);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-let carModels = [];
-console.log();
+let carModels = ["Navigator","Miata MX-5", "Defender Ice Edition", "Accord", "Galant", "riolet", "Fortwo", "4000CS Quattro", "Windstar", "E-Class", "G35", "Esprit",
+"Esprit", "Ram Van 1500", "Cavalier", "Intrepid", "Montero Sport"]; 
+
+
+
+console.log(carModels.sort());
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = [];
-console.log();
+let carYears = [2009, 2001, 2010, 1983, 1990, 1995, 1987, 2009, 1996, 2000];
+carYears.sort(function(a, b)) {
+    return a - b;
+
+}
+
+
+
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
